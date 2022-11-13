@@ -43,6 +43,7 @@ int main() {
 	list<const char*> lst(28);
 	auto itr = lst.begin();
 	for (int i = 0; i < 28; i++) {
+
 		*itr = yamanoteLine[i];
 		itr++;
 	}
@@ -50,6 +51,7 @@ int main() {
 	//1970年の山手線の表示
 	printf("1970年の山手線\n");
 	for (auto itr = lst.begin(); itr != lst.end(); ++itr) {
+
 		cout << *itr << "\n";
 		printf("  |\n");
 	}
@@ -59,10 +61,10 @@ int main() {
 	printf("--------------------------\n");
 
 	//西日暮里駅の挿入
-	const char* newstaoion = "Nisi-Nippori";
 	for (list<const char*>::iterator itr = lst.begin(); itr != lst.end(); ++itr) {
+
 		if (*itr == "Tabata") {
-			itr = lst.insert(itr, newstaoion);
+			itr = lst.insert(itr, "Nisi-Nippori");
 			++itr;
 		}
 	}
@@ -70,6 +72,7 @@ int main() {
 	//2019年の山手線の表示
 	printf("2019年の山手線\n");
 	for (auto itr = lst.begin(); itr != lst.end(); ++itr) {
+
 		cout << *itr << "\n";
 		printf("  |\n");
 	}
@@ -79,10 +82,10 @@ int main() {
 	printf("--------------------------------\n");
 
 	//高輪ゲートウェイ駅の挿入
-	const char* newstaoion2 = "Takanawa-Gateway";
 	for (list<const char*>::iterator itr = lst.begin(); itr != lst.end(); ++itr) {
+
 		if (*itr == "Tamachi") {
-			itr = lst.insert(itr, newstaoion2);
+			itr = lst.insert(itr,"Takanawa-Gateway");
 			++itr;
 		}
 	}
@@ -90,6 +93,7 @@ int main() {
 	//2022年の山手線の表示
 	printf("2022年の山手線\n");
 	for (auto itr = lst.begin(); itr != lst.end(); ++itr) {
+
 		cout << *itr << "\n";
 		printf("  |\n");
 	}
